@@ -13,9 +13,12 @@
               <li class="nav-item">
                 <a class="nav-link @if(request()->routeIs('comics.index')) active @endif" href="{{route('comics.index')}}">Comics</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link @if(request()->routeIs('comics.create')) active @endif" href="{{route('comics.create')}}">Add</a>
+              </li>
             </ul>
             <form class="d-flex" action="{{route('comics.index')}}">
-              <input class="form-control me-2" type="search" placeholder="Search" name="search" value="@isset($search) $search @endisset" aria-label="Search">
+              <input class="form-control me-2" type="search" placeholder="Search" name="search" value="@isset($search) {{$search}} @endisset" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
           </div>
