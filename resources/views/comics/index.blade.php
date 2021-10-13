@@ -22,7 +22,8 @@
                 <td>{{$comic->series}}</td>
                 <td>{{$comic->type}}</td>
                 <td>{{$comic->price}}</td>
-                <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-warning">Vai</a></td>
+                <td><a href="{{route('comics.show', $comic->id)}}" class="btn btn-warning me-2">Go</a>
+                <a href="{{route('comics.edit', $comic->id)}}" class="btn btn-danger">Edit</a></td>
             </tr>
             @empty
                 <td colspan="5" class="text-center">Nessun risultato corrispondente</td>
